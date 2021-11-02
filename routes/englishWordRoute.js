@@ -6,5 +6,8 @@ const englishWordController = require('../controllers/englishWordController');
 
 // get comments of media
 router.route('/').get(englishWordController.get_all_words);
+router.route('/').post(englishWordController.insert_single_word);
+
+router.route('/:wordId').get(englishWordController.get_word_by_id)
 
 module.exports = router;
