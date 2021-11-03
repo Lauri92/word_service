@@ -2,7 +2,7 @@
 const englishWordModel = require('../models/englishWordModel');
 const {validationResult} = require('express-validator');
 
-// send some json
+// send some json containing words
 const getSomeWords = async (req, res) => {
 
   const words = [
@@ -29,7 +29,7 @@ const getSomeWords = async (req, res) => {
   res.json(words);
 };
 
-// Get all comments of a media
+// Get all words
 const get_all_words = async (req, res) => {
   const words = await englishWordModel.getAllWords();
   await res.json(words);
